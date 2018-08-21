@@ -7,7 +7,7 @@ use Magento\Sales\Model\Order;
 use Magento\Sales\Model\Order\Invoice as OrderInvoice;
 use Magento\Sales\Model\ResourceModel\Order\CollectionFactory as OrderCollectionFactory;
 use Magento\Sales\Model\Service\InvoiceService;
-
+use Magento\Sales\Model\Service\InvoiceService\Proxy as InvoiceServiceProxy;
 use Aune\AutoInvoice\Api\InvoiceProcessInterface;
 use Aune\AutoInvoice\Helper\Data as HelperData;
 
@@ -43,7 +43,7 @@ class InvoiceProcess implements InvoiceProcessInterface
         HelperData $helperData,
         OrderCollectionFactory $orderCollectionFactory,
         Transaction $transaction,
-        InvoiceService $invoiceService
+        InvoiceServiceProxy $invoiceService
     ) {
         $this->helperData = $helperData;
         $this->orderCollectionFactory = $orderCollectionFactory;
