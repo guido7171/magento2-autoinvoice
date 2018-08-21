@@ -3,14 +3,12 @@
 	
 	<preference for="Aune\AutoInvoice\Api\InvoiceProcessInterface"
 	    type="Aune\AutoInvoice\Model\InvoiceProcess" />
-	
-	<!-- Console commands -->
-    <type name="Magento\Framework\Console\CommandListInterface">
+
+    <type name="Magento\Framework\Console\CommandList">
         <arguments>
             <argument name="commands" xsi:type="array">
-                <item name="ProcessCommand" xsi:type="object">Aune\AutoInvoice\Console\ProcessCommand</item>
+                <item name="ProcessCommand" xsi:type="object">Aune\AutoInvoice\Console\Command\ProcessCommand</item>
             </argument>
         </arguments>
     </type>
-    
 </config>
